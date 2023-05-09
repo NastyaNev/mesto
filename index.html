@@ -12,13 +12,37 @@
 <body class="root">
     <div class="page">
         <header class="header content">
-            <img class="logo" src="images/logo.svg" alt="Логотип сервиса Место">
+            <div class="logo-container">
+                <img class="logo" src="images/logo.svg" alt="Логотип сервиса Место">
+            </div>
+            <svg class="header__line" viewBox="0 0 880 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line opacity="0.7" x1="-4.37114e-08" y1="0.5" x2="880" y2="0.499923" stroke="#545454"/>
+            </svg>
         </header>
 
+        <main>
+            <div class="profile-header content">
+                <div class="profile-header__user">
+                    <img class="profile-header__user-avatar" src="images/image.jpg" alt="Аватар">
+                    <div class="profile-header__user-info">
+                        <h1 class="profile-header__user-name">Жак-Ив Кусто</h1>
+                        <p class="profile-header__user-description">Исследователь океана</p>
+                    </div>
+                    <button type="button">
+                        <img class="profile-header__edit-button" src="images/Edit Button.svg" alt="Кнопка &quot;Редактировать&quot;">
+                    </button>
+                </div>
 
-        <main></main>
+                <button type="button">
+                    <img class="profile-header__add-button" src="images/Add Button.svg" alt="Кнопка &quot;Добвыить&quot;">
+                </button>
+            </div>
 
-        <footer></footer>
+        </main>
+
+        <footer class="footer content">
+            <p class="footer__autor">&copy; 2023 Mesto Russia</p>
+        </footer>
 
     </div>
 </body>
