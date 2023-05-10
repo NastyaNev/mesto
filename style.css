@@ -26,7 +26,13 @@
 
 @media (max-width: 1279px) {
     .header {
-        margin-top: calc(100vw/(1280/45));;
+        margin-top: calc(100vw/(1280/45));
+    }
+}
+
+@media (max-width: 570px) {
+    .header {
+        margin-top: 20px;
     }
 }
 
@@ -157,7 +163,7 @@
     margin: 0 0 0 18px;
     width: calc((100vw*24)/1280);
     max-width: 24px;
-    min-width: 22px;
+    min-width: 21px;
 }
 
 @media (max-width: 1279px) {
@@ -186,8 +192,8 @@
 
 @media (max-width: 767px) {
     .profile-header__user-description {
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 11px;
+        line-height: 13px;
         margin: 2px 0 0 0;
     }
 }
