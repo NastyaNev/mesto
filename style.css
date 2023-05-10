@@ -26,6 +26,7 @@
 
 .content {
     width: calc(100% - (400 * 100%/1280));
+    min-width: 282px;
     /* outline: 1px solid red; */
     margin-left: auto;
     margin-right: auto;
@@ -61,7 +62,9 @@
     line-height: 0;
     height: calc(100vw/(1280/120));
     max-height: 120px;
-    min-height: 100px;
+    min-height: 70px;
+    min-width: 100px;
+    max-width: 500px;
 }
 
 .profile-header__user-avatar {
@@ -72,6 +75,13 @@
 
 .profile-header__user-info {
     margin-left: 30px;
+    min-width: 100px;
+}
+
+@media (max-width: 1279px) {
+    .profile-header__user-info {
+        margin-left: calc((100vw*30)/1280);
+    }
 }
 
 .profile-header__name-line {
@@ -79,11 +89,34 @@
     align-items: baseline;
 }
 
+@media (max-width: 767px) {
+    .profile-header__name-line {
+        align-items: center;
+    }
+}
+
 .profile-header__user-name {
     font-weight: 500;
     font-size: 42px;
-    line-height: 39px;
+    line-height: 48px;
     margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 1279px) {
+    .profile-header__user-name {
+        font-size: calc((100vw*42)/1280);
+        line-height: calc((100vw*48)/1280);
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-header__user-name {
+        font-size: 20px;
+        line-height: 23px;
+    }
 }
 
 .button  {
@@ -96,25 +129,97 @@
 }
 
 .profile-header__edit-button {
-    margin: 0 0 0 16px;
+    margin: 0 0 0 18px;
+    width: calc((100vw*24)/1280);
+    max-width: 24px;
+    min-width: 20px;
+}
+
+@media (max-width: 1279px) {
+    .profile-header__edit-button {
+        margin-left: calc((100vw*18)/1280);
+    }
 }
 
 .profile-header__user-description {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
-    margin: 16px 0 0 0;
+    font-size: 18;
+    line-height: 21.78px;
+    margin: 7px 0 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: calc(100% - (24px + 18px));
+}
+
+@media (max-width: 1279px) {
+    .profile-header__user-description {
+        font-size: calc((100vw*18)/1280);
+        line-height: calc((100vw*21.78)/1280);
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-header__user-description {
+        font-size: 10px;
+        line-height: 12px;
+        margin: 2px 0 0 0;
+    }
+}
+
+.add-button__container {
+    width: calc((100vw*150)/1280);
+    max-width: 150px;
+    min-width: 36px;
+    height: calc((100vw*50)/1280);
+    max-height: 50px;
+    min-height: 36px;
+    border: 2px #FFFFFF solid;
+    border-radius: 2px;
+    margin-left: 7px;
+}
+
+@media (max-width: 600px) {
+    .add-button__container {
+        width: 36px;
+        height: 36px;
+    }
 }
 
 .profile-header__add-button {
+    width: calc((100vw*22)/1280);
+    max-width: 22px;
+    min-width: 16px;
+    margin: auto;
+}
 
+@media (max-width: 600px) {
+    .profile-header__add-button {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .gallery {
     display: grid;
     gap: 20px 17px;
-    grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
     margin-top: 51px;
+    justify-items: center;
+    width: 880px;
+    text-align: justify;
+}
+
+@media (max-width: 1279px) {
+    .gallery {
+        width: 581px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        width: 282px;
+    }
 }
 
 .gallery__item {
@@ -132,6 +237,7 @@
     object-fit: cover;
     object-position: center;
     justify-self: center;
+    display: flex;
 }
 
 .gallery__caption {
@@ -139,13 +245,20 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 29.05px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .gallery__caption-line {
     display: flex;
-    margin: 25px 15px 0 21px;
+    margin: 25px 20px 0 21px;
     justify-content: space-between;
     /* outline: solid 1px  red; */
+}
+
+.gellary__like {
+    margin-left: 20px;
 }
 
 .footer {
