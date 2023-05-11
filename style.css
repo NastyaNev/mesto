@@ -13,7 +13,11 @@
 }
 
 .popup {
-    /* display: none; */ 
+    display: none; 
+}
+
+.popup_opened {
+    display: flex;
 }
 
 .popup__background {
