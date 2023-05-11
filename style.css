@@ -171,13 +171,18 @@
     }
 }
 
-.button  {
+.button {
     margin: 0;
     padding: 0;
     border: 0;
     background: none;
     cursor: pointer;
     line-height: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.button:hover {
+    opacity: 0.6;
 }
 
 .profile-header__edit-button {
@@ -306,8 +311,16 @@
     justify-content: space-between;
 }
 
-.gellary__like {
+.gellary__like-button {
     margin-left: 20px;
+}
+
+.gellary__like-button:hover {
+    opacity: 0.5;
+}
+
+.gellary__like-button_active {
+   display: none;
 }
 
 .footer {
